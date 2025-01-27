@@ -9,6 +9,18 @@ In this paper, we introduce a benchmark called $M^4$ Bench to enhance the capabi
 We carefully design five comparison tasks related to coarse and fine-grained granularities in single and multiple domains of images and evaluate them on 13 state-of-the-art multi-modal large language models with various sizes. 
 Besides, we analyze the evaluation results and provide several observations and viewpoints for the multi-image understanding research.
 ![Alt text](assets/all.png)
+
+## Release Process
+- [x] Dataset
+  - [x] Preparing images
+  - [x] Preparing question-answer pairs
+- [ ] Model evaluation
+
+## Dataset 🌟
+**M4Bench**: 🤗[Hugging Face](https://huggingface.co/datasets/Daria8976/M4Bench)
+<img src="assets/statistics.png" />
+<img src="assets/comparison.png" />
+
 ## Evaluation
 Please refer to our [outputs](outputs) folder for more details.
 ![Alt text](assets/outputs.png)
