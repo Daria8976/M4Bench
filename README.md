@@ -14,10 +14,12 @@ Besides, we analyze the evaluation results and provide several observations and 
 - [x] Dataset
   - [x] Preparing images
   - [x] Preparing question-answer pairs
-- [ ] Model evaluation
+- [x] Evaluation outputs
+- [ ] Evaluation code
 
 ## Dataset 🌟
 **M4Bench**: 🤗[Hugging Face](https://huggingface.co/datasets/Daria8976/M4Bench)
+
 <img src="assets/statistics.png" />
 <img src="assets/comparison.png" />
 
