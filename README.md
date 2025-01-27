@@ -1,5 +1,5 @@
 # <img src="assets/M4Bench.png" width="35" />M4Bench
-[![Dataset](https://img.shields.io/badge/Dataset-Hugging_Face-CFAFD4)](https://huggingface.co/datasets/Daria8976/M4Bench) 
+[![Dataset](https://img.shields.io/badge/Dataset-Hugging_Face-CFAFD4)](https://huggingface.co/datasets/Anonymous8976/M4Bench) 
 
 ## Introduction
 The increasing demands in analyzing complex associated scenes pose necessities to researching multi-image understanding abilities. 
@@ -18,7 +18,7 @@ Besides, we analyze the evaluation results and provide several observations and 
 - [ ] Evaluation code
 
 ## Dataset 🌟
-**M4Bench**: 🤗[Hugging Face](https://huggingface.co/datasets/Daria8976/M4Bench)
+**M4Bench**: 🤗[Hugging Face](https://huggingface.co/datasets/Anonymous8976/M4Bench)
 
 <img src="assets/statistics.png" />
 <img src="assets/comparison.png" />
