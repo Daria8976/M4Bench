@@ -14,7 +14,7 @@ from tqdm import tqdm
 from utils.evaluation import GPT, extract_answer_from_item
 from utils.common_utils import seed_everything
 from utils.prompt import prompt_process_mapping
-from vlminference import AutoModel
+from utils.models import AutoModel
 
 # model_name: (model_path, need_remove_image_tag, grounding_template)
 model_mapping = {
