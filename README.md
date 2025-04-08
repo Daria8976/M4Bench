@@ -28,6 +28,9 @@ Besides, we analyze the evaluation results and provide several observations and 
 > [!TIP] 
 > Since different MLLMs may require different versions of `transformers` and `other dependencies`, we recommend creating **a separate virtual environment** for each model series (e.g., Qwen Series) to avoid dependency conflicts.
 ```bash
+conda create -n m4bench python=3.10 -y
+# git clone this repo
+cd M4Bench
 pip install -r requirements.txt
 ```
 
