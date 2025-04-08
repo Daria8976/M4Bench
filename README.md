@@ -44,9 +44,13 @@ export OPENAI_API_KEY=your_api_key
 ### Step 3. Model & Dataset
 You can download the models and datasets from the huggingface, and put them in the `llm` and `dataset` folder respectively.
 ```bash
+# download the models like Qwen/Qwen2-VL-7B-Instruct
 mkdir llm
 mkdir dataset
 ```
+| Model Name       | Supports Multiple Images | Supports Grounding | Model Name       | Supports Multiple Images | Supports Grounding |
+|------------------|---------------------------|--------------------|------------------|---------------------------|--------------------|
+| GPT-4 Vision     | Yes                       | Yes                | CLIP             | No                        | No                 |
 
 
 
