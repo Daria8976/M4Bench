@@ -44,23 +44,22 @@ export OPENAI_API_KEY=your_api_key
 ### Step 3. Model & Dataset
 You can download the models and datasets from the huggingface, and put them in the `llm` and `dataset` folder respectively.
 ```bash
-# download the models like Qwen/Qwen2-VL-7B-Instruct
-mkdir llm
+mkdir llm # for example, llm/Qwen/Qwen2-VL-2B-Instruct
 mkdir dataset
 ```
 We have implemented **10 open-source models** in our benchmark, as shown in the table below.
 | Model Name       | Supports Multiple Images | Supports Grounding | Model Name       | Supports Multiple Images | Supports Grounding |
 |------------------|---------------------------|--------------------|------------------|---------------------------|--------------------|
-| Qwen2VL-2B     |   ✅                       | ✅                | Qwen2VL-7B             | ✅                         | ✅          |
+| Qwen2-VL-2B-Instruct     |   ✅                       | ✅                | Qwen2-VL-7B-Instruct             | ✅                         | ✅          |
 | InternVL2-4B     |   ✅                       | ✅                | InternVL2-8B            | ✅                         | ✅          |
 | InternVL2.5-4B     |   ✅                       | ✅                | InternVL2.5-8B            | ✅                         | ✅          |
-| DeepSeek-VL2-3B     |   ✅                       | ✅                | DeepSeek-VL2-16B            | ✅                         | ✅          |
-| MiniCPM-V2.6-8B     |   ✅                       | ❌                | LLaVA-OneVision            | ✅                         | ❌          |
+| deepseek-vl2-tiny     |   ✅                       | ✅                | deepseek-vl2-small            | ✅                         | ✅          |
+| MiniCPM-V-2_6     |   ✅                       | ❌                | llava-onevision            | ✅                         | ❌          |
 ### Step 4. Evaluate
 Now, you can start the evaluation process by running the following command:
 ```bash
 # Run a model with multiple tasks in parallel
-# Each task name in task_list is separated by a comma.
+# Each task in task_list is separated by a comma.
 python3 main.py \
   --model_name Qwen2-VL-7B-Instruct \
   --task_list Object_States,State_Invariance
