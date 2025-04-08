@@ -1,6 +1,7 @@
 # <img src="assets/M4Bench.png" width="35" />M4Bench
 [![Dataset](https://img.shields.io/badge/Dataset-Hugging_Face-CFAFD4)](https://huggingface.co/datasets/Anonymous8976/M4Bench) 
 
+
 ## Introduction
 The increasing demands in analyzing complex associated scenes pose necessities to researching multi-image understanding abilities. 
 Compared with understanding individual images, both the alignments and differences between images are essential aspects of understanding the intricate relationships for multi-image inference tasks. 
