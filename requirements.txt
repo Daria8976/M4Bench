@@ -1,0 +1,3 @@
+openai
+python-dotenv
+torch>=2.0.0
