@@ -1,6 +1,8 @@
 accelerate
 openai
+Pillow
 python-dotenv
 qwen-vl-utils[decord]
+termcolor
 torch>=2.0.0
 transformers
