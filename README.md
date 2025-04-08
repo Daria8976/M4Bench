@@ -53,8 +53,9 @@ We have implemented **10 open-source models** in our benchmark, as shown in the 
 |------------------|---------------------------|--------------------|------------------|---------------------------|--------------------|
 | Qwen2VL-2B     |   ✅                       | ✅                | Qwen2VL-7B             | ✅                         | ✅          |
 | InternVL2-4B     |   ✅                       | ✅                | InternVL2-8B            | ✅                         | ✅          |
-
-
+| InternVL2.5-4B     |   ✅                       | ✅                | InternVL2.5-8B            | ✅                         | ✅          |
+| DeepSeek-VL2-3B     |   ✅                       | ✅                | DeepSeek-VL2-16B            | ✅                         | ✅          |
+| MiniCPM-V2.6-8B     |   ✅                       | ❌                | LLaVA-OneVision            | ✅                         | ❌          |
 
 ## Evaluation
 Please refer to our [outputs](outputs) folder for more details.
