@@ -36,6 +36,8 @@ pip install -r requirements.txt
 ```
 ### Step 2. Preparation
 Our evaluation code supports API models (like the GPT series or any other models accessible via the OpenAI API) as a judge. The only thing you need to do is to set the environment variable `OPENAI_API_KEY` like blew.
+
+If you don't set the variable, 
 ```bash
 export OPENAI_API_KEY=your_api_key
 ```
