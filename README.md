@@ -26,7 +26,7 @@ Besides, we analyze the evaluation results and provide several observations and 
 
 ## Installation
 > [!TIP] 
-> Since different MLLMs may require different versions of `transformers` and other dependencies, we recommend creating a separate virtual environment for each model series (e.g., Qwen Series) to avoid dependency conflicts.
+> Since different MLLMs may require different versions of `transformers` and `other dependencies`, we recommend creating **a separate virtual environment** for each model series (e.g., Qwen Series) to avoid dependency conflicts.
 ```bash
 pip install -r requirements.txt
 ```
