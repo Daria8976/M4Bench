@@ -34,13 +34,20 @@ conda create -n m4bench python=3.10 -y
 cd M4Bench
 pip install -r requirements.txt
 ```
-### Step 2. LLM Judge (optional)
+### Step 2. LLM Judge
 Our evaluation code supports API models (like the GPT series or any other models accessible via the OpenAI API) as a judge. The only thing you need to do is to set the environment variable `OPENAI_API_KEY` like blew.
 > [!IMPORTANT]
 > If you don't set the variable, the evaluation will default to using `exact match` as the assessment method
 ```bash
 export OPENAI_API_KEY=your_api_key
 ```
+### Step 3. Model & Dataset
+You can download the models and datasets from the huggingface, and put them in the `llm` and `dataset` folder respectively.
+```bash
+mkdir llm
+mkdir dataset
+```
+
 
 
 ## Evaluation
