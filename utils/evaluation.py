@@ -197,4 +197,15 @@ class GPT:
         self.base_url = base_url
 
     def infer(self, prompt):
+        client = OpenAI(
+            api_key=self.api_key,
+            base_url=self.base_url,
+        )
+        response = client.chat.completions.create(
+            model=self.model_name,
+            messages=[
+                {"role": "user", "content": prompt},
+            ],
+        )
+        return response.choices[0].message.content
 
