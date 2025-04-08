@@ -16,7 +16,7 @@ Besides, we analyze the evaluation results and provide several observations and 
   - [x] Preparing images
   - [x] Preparing question-answer pairs
 - [x] Evaluation outputs
-- [ ] Evaluation code
+- [x] Evaluation code
 
 ## Dataset 🌟
 **M4Bench**: 🤗[Hugging Face](https://huggingface.co/datasets/Anonymous8976/M4Bench)
