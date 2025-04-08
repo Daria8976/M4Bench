@@ -48,9 +48,11 @@ You can download the models and datasets from the huggingface, and put them in t
 mkdir llm
 mkdir dataset
 ```
+We have implemented **10 open-source models** in our benchmark, as shown in the table below.
 | Model Name       | Supports Multiple Images | Supports Grounding | Model Name       | Supports Multiple Images | Supports Grounding |
 |------------------|---------------------------|--------------------|------------------|---------------------------|--------------------|
-| GPT-4 Vision     | Yes                       | Yes                | CLIP             | No                        | No                 |
+| Qwen2VL-2B     |   ✅                       | ✅                | Qwen2VL-7B             | ✅                         | ✅          |
+| InternVL2-4B     |   ✅                       | ✅                | InternVL2-8B            | ✅                         | ✅          |
 
 
 
