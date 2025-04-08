@@ -186,3 +186,15 @@ def extract_answer_from_item(model, item, dataset_name=None):
         if retry == 0:
             options = list(choices) + ['Z'] if 'Z' not in choices else []
             return dict(opt=rd.choice(options), log='Failed to predict, thus randomly generate one.')
+
+class GPT:
+    def __init__(self, model_name = "gpt-4o", base_url = None):
+        api_key = os.environ.get("OPENAI_API_KEY", None)
+        if api_key is None:
+            raise ValueError("Please set OPENAI_API_KEY environment variable.")
+        self.api_key = api_key
+        self.model_name = model_name
+        self.base_url = base_url
+
+    def infer(self, prompt):
+        
