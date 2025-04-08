@@ -55,11 +55,13 @@ We have implemented **10 open-source models** in our benchmark, as shown in the 
 | InternVL2.5-4B     |   ✅                       | ✅                | InternVL2.5-8B            | ✅                         | ✅          |
 | deepseek-vl2-tiny     |   ✅                       | ✅                | deepseek-vl2-small            | ✅                         | ✅          |
 | MiniCPM-V-2_6     |   ✅                       | ❌                | llava-onevision            | ✅                         | ❌          |
+> [!IMPORTANT]
+> If you have downloaded the models, you need to modify the `model_mapping` in `main.py` to point to the correct paths.
 ### Step 4. Evaluate
 Now, you can start the evaluation process by running the following command:
 ```bash
 # Run a model with multiple tasks in parallel
-# Each task in task_list is separated by a comma.
+# 
 python3 main.py \
   --model_name Qwen2-VL-7B-Instruct \
   --task_list Object_States,State_Invariance
