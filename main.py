@@ -24,12 +24,10 @@ model_mapping = {
     "InternVL2-8B": ("llm/OpenGVLab/InternVL2-8B", True, "internvl2"),
     "InternVL2_5-4B": ("llm/OpenGVLab/InternVL2_5-4B", True, "internvl2"),
     "InternVL2_5-8B": ("llm/OpenGVLab/InternVL2_5-8B", True, "internvl2"),
-    "InternVL2_5-26B": ("llm/OpenGVLab/InternVL2_5-26B", True, "internvl2"),
     "deepseek-vl2-tiny": ("llm/deepseek-ai/deepseek-vl2-tiny", True, 'deepseek-vl2'),
     "deepseek-vl2-small": ("llm/deepseek-ai/deepseek-vl2-small", True, 'deepseek-vl2'),
-    "MiniCPM-V-2_6": ("llm/OpenBMB/MiniCPM-V-2_6", True, "closed_source"),
-    "MiniCPM-O":("/home/admin/workspace/aop_lab/llm/openbmb/MiniCPM-o-2_6",True, "closed_source"),
-    "llava-onevision-qwen2-7b-ov-chat": ("llm/lmms-lab/llava-onevision-qwen2-7b-ov-chat", True, "closed_source"),
+    "MiniCPM-V-2_6": ("llm/OpenBMB/MiniCPM-V-2_6", True, None),
+    "llava-onevision-qwen2-7b-ov-chat": ("llm/lmms-lab/llava-onevision-qwen2-7b-ov-chat", True, None),
     "GPT-4o": ("API Key", True, "closed_source"),
     "Gemini-Pro": ("API Key", True, "closed_source"),
     "Qwen-VL-Max": ("API Key", True, "closed_source")
@@ -55,7 +53,7 @@ def eval_task(task_name=None, model_name=None, remove_image_tag=True, grounding_
         "score": None
     }
     if isinstance(model, str):
-        pre_test_result_dir = 'MMCBench/close_mllms_csv_output'
+        pre_test_result_dir = 'MFourBench/close_mllms_csv_output'
         if task_name == 'Detailed_Difference_Generated_Images':
             task_name_lower = 'detailed_difference_gi'
         elif task_name == 'Detailed_Difference_Natural_Images':
@@ -173,12 +171,15 @@ if __name__ == "__main__":
         task_list = [task.strip() for task in args.task_list.split(",")]
         invalid_task_list = [task for task in task_list if task not in task_mapping.keys()]
         if len(invalid_task_list) > 0:
-            raise ValueError(f"Invalid task name: {', '.join(invalid_task_list)}; MMCBench only supports {', '.join(task_mapping.keys())}")
+            raise ValueError(f"Invalid task name: {', '.join(invalid_task_list)}; MFourBench only supports {', '.join(task_mapping.keys())}")
 
     # step-2, prepare the model and gpt
     if args.model_name not in model_mapping.keys():
-        raise ValueError(f"Invalid model name: {args.model_name}; MMCBench only supports {', '.join(model_mapping.keys())}")
-    gpt = GPT(os.getenv("gpt_api_key"), model='gpt-3.5-turbo')
+        raise ValueError(f"Invalid model name: {args.model_name}; MFourBench only supports {', '.join(model_mapping.keys())}")
+    if os.environ.get("OPENAI_API_KEY", None):
+        gpt = GPT(model_name='gpt-3.5-turbo')
+    else:
+        gpt = None
     model_path, remove_image_tag, grounding_template = model_mapping[args.model_name]
     if model_path != "API Key":
         model = AutoModel.from_pretrained(model_path, do_sample=False, repetition_penalty=1.0)

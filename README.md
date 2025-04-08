@@ -60,10 +60,10 @@ We have implemented **10 open-source models** in our benchmark, as shown in the 
 ### Step 4. Evaluate
 Now, you can start the evaluation process by running the following command:
 - model_name: `model_mapping` variable in `main.py`
-- task_list: `task_mapping` variable in `main.py`
+- task_list: `task_mapping` variable in `main.py`, separated by commas
 ```bash
 # Run a model with multiple tasks in parallel
-python3 main.py \
+python main.py \
   --model_name Qwen2-VL-7B-Instruct \
   --task_list Object_States,State_Invariance
 ```
