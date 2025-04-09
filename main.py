@@ -67,9 +67,9 @@ def eval_task(task_name=None, model_name=None, remove_image_tag=True, grounding_
         elif task_name == 'Spatial_Perception_WithOut_Visual_Prompt':
             task_name_lower = 'sp_without_visual_prompts'
         elif task_name == 'Instance_Comparison_With_Visual_Prompt':
-            task_name_lower = 'pa_with_visual_prompts'
+            task_name_lower = 'ic_with_visual_prompts'
         elif task_name == 'Instance_Comparison_WithOut_Visual_Prompt':
-            task_name_lower = 'pa_without_visual_prompts'
+            task_name_lower = 'ic_without_visual_prompts'
         else:
             pass
 
