@@ -40,8 +40,8 @@ task_mapping = {
     "Detailed_Difference_Natural_Images": ("dataset/Detailed_Difference/instruction_nature_images.json", "MCQ"),
     "Spatial_Perception_With_Visual_Prompt": ("dataset/Spatial_Perception/instruction.json", "MCQ"),
     "Spatial_Perception_WithOut_Visual_Prompt": ("dataset/Spatial_Perception/instruction.json", "MCQ"),
-    "Part_Attribute_With_Visual_Prompt": ("dataset/Part_Attribute/instruction.json", "MCQ"),
-    "Part_Attribute_WithOut_Visual_Prompt": ("dataset/Part_Attribute/instruction.json", "MCQ"),
+    "Instance_Comparison_With_Visual_Prompt": ("dataset/Instance_Comparison/instruction.json", "MCQ"),
+    "Instance_Comparison_WithOut_Visual_Prompt": ("dataset/Instance_Comparison/instruction.json", "MCQ"),
 }
 
 def eval_task(task_name=None, model_name=None, remove_image_tag=True, grounding_template=None, save_path=None, model=None, gpt=None):
@@ -66,9 +66,9 @@ def eval_task(task_name=None, model_name=None, remove_image_tag=True, grounding_
             task_name_lower = 'sp_with_visual_prompts'
         elif task_name == 'Spatial_Perception_WithOut_Visual_Prompt':
             task_name_lower = 'sp_without_visual_prompts'
-        elif task_name == 'Part_Attribute_With_Visual_Prompt':
+        elif task_name == 'Instance_Comparison_With_Visual_Prompt':
             task_name_lower = 'pa_with_visual_prompts'
-        elif task_name == 'Part_Attribute_WithOut_Visual_Prompt':
+        elif task_name == 'Instance_Comparison_WithOut_Visual_Prompt':
             task_name_lower = 'pa_without_visual_prompts'
         else:
             pass

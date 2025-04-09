@@ -222,11 +222,11 @@ def prepare_spatial_perception_without_visual_prompt_prompt(sample, remove_image
     prompt = f"{question}\n" + "\n".join(filled_options)
     return prompt, question, options_dict
 
-def prepare_part_attribute_with_visual_prompt_prompt(sample, remove_image_tag, grounding_template):
+def prepare_instance_comparison_with_visual_prompt_prompt(sample, remove_image_tag, grounding_template):
     if remove_image_tag:
         question = sample.get('question')
     else:
-        raise NotImplementedError("remove_image_tag must be True for Part_Attribute task")
+        raise NotImplementedError("remove_image_tag must be True for Instance_Comparison task")
     
     if grounding_template == 'closed_source':
         question = '[x1, y1, x2, y2] represents a bounding box, where (x1, y1) denotes the top-left corner and (x2, y2) denotes the bottom-right corner. ' + question
@@ -299,11 +299,11 @@ def prepare_part_attribute_with_visual_prompt_prompt(sample, remove_image_tag, g
     prompt = f"{question}\n" + "\n".join(filled_options)
     return prompt, question, options_dict
 
-def prepare_part_attribute_without_visual_prompt_prompt(sample, remove_image_tag, grounding_template):
+def prepare_instance_comparison_without_visual_prompt_prompt(sample, remove_image_tag, grounding_template):
     if remove_image_tag:
         question = sample.get('question_without_prompt')
     else:
-        raise NotImplementedError("remove_image_tag must be True for Part_Attribute task")
+        raise NotImplementedError("remove_image_tag must be True for Instance_Comparison task")
     
     if grounding_template == 'closed_source':
         question = '[x1, y1, x2, y2] represents a bounding box, where (x1, y1) denotes the top-left corner and (x2, y2) denotes the bottom-right corner. ' + question
@@ -363,6 +363,6 @@ prompt_process_mapping = {
     "State_Invariance": prepare_state_invariance_prompt,
     "Spatial_Perception_With_Visual_Prompt": prepare_spatial_perception_with_visual_prompt_prompt,
     "Spatial_Perception_WithOut_Visual_Prompt": prepare_spatial_perception_without_visual_prompt_prompt,
-    "Part_Attribute_With_Visual_Prompt": prepare_part_attribute_with_visual_prompt_prompt,
-    "Part_Attribute_WithOut_Visual_Prompt": prepare_part_attribute_without_visual_prompt_prompt,
+    "Instance_Comparison_With_Visual_Prompt": prepare_instance_comparison_with_visual_prompt_prompt,
+    "Instance_Comparison_WithOut_Visual_Prompt": prepare_instance_comparison_without_visual_prompt_prompt,
 }
