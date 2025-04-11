@@ -21,6 +21,10 @@ Besides, we analyze the evaluation results and provide several observations and 
 ## Dataset 🌟
 **M4Bench**: 🤗[Hugging Face](https://huggingface.co/datasets/Anonymous8976/M4Bench)
 
+**We have provided both versions of the dataset on huggingface:**
+1. the current path-based naming scheme;
+2. a neutral image filenames (e.g., “img1_1”, “img1_2”) in one folder.
+
 <img src="assets/statistics.png" />
 <img src="assets/comparison.png" />
 
